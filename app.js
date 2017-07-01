@@ -16,9 +16,11 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
 
-mongoose.connect(process.env.DATABASEURL);
-//mongoose.connect("mongodb://rahman:password@ds145302.mlab.com:45302/yelpcamp_project");
-
+//mongoose.connect("mongodb://localhost/yelp_camp") 
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp"
+mongoose.connect(url);
+//used env variable to set different connection url for the db
+// local used for development and the db on mongolab for production (heroku)
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
