@@ -1,6 +1,6 @@
 Here is the live application deployed on Heroku: https://floating-beyond-77891.herokuapp.com/
 
-#YelpCamp
+#YelpCamp Project Workflow
 
 ##Initial Setup
 * Add Landing Page
